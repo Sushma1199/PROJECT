@@ -1,0 +1,28 @@
+# .github/workflows/ci-cd.yml
+
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          python build_script.py
+
+      - name: Test
+        run: |
+          python test_script.py
+
+      - name: Deploy
+        run: |
+          python deploy_script.py
