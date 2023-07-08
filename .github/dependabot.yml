@@ -1,19 +1,25 @@
-# To get started with Dependabot version updates, you'll need to specify which
-
-      version: 2
+version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
+  - package-ecosystem: "" # Specify the package ecosystem (e.g., "npm", "maven")
     directory: "/" # Location of package manifests
     schedule:
-      interval: "weekly"
+      interval: "daily" # Change the interval to "daily"
     labels:
-      - "dependency-graph" # Add a label to identify the dependency graph update
+      - "dependency-update" # Add a label to identify dependency update pull requests
     open-pull-requests-limit: 5 # Limit the number of open pull requests for dependency updates
+
+alerts:
+  - package-ecosystem: "" # Specify the package ecosystem for Dependabot alerts
+    directory: "/" # Location of package manifests
+    severity: "high" # Specify the desired alert severity level (e.g., "low", "moderate", "high")
+    ignore:
+      - dependency-name: "" # Specify dependencies to ignore alerts for
 
 graphs:
   - package-ecosystem: "" # Specify the package ecosystem for the dependency graph
     directory: "/" # Location of package manifests
     output: "dependency-graph.png" # Output file for the dependency graph
+
 
 
 
