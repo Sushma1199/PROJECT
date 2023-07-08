@@ -19,10 +19,3 @@ graphs:
   - package-ecosystem: "" # Specify the package ecosystem for the dependency graph
     directory: "/" # Location of package manifests
     output: "dependency-graph.png" # Output file for the dependency graph
-
-
-
-
-
-
-
