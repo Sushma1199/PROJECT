@@ -1,28 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "" # Specify the package ecosystem (e.g., "npm", "maven")
+  - package-ecosystem: "npm" # Specify the package ecosystem (e.g., "npm", "maven")
     directory: "/" # Location of package manifests
     schedule:
-      interval: "daily" # Change the interval to "daily"
+      interval: "daily" # Set the interval to "daily" or your preferred frequency
     labels:
       - "dependency-update" # Add a label to identify dependency update pull requests
     open-pull-requests-limit: 5 # Limit the number of open pull requests for dependency updates
 
-alerts:
-  - package-ecosystem: "" # Specify the package ecosystem for Dependabot alerts
-    directory: "/" # Location of package manifests
-    severity: "high" # Specify the desired alert severity level (e.g., "low", "moderate", "high")
-    ignore:
-      - dependency-name: "" # Specify dependencies to ignore alerts for
-
 graphs:
   - package-ecosystem: "" # Specify the package ecosystem for the dependency graph
-    directory: "/" # Location of package manifests
+    directory: "" # Location of package manifests
     output: "dependency-graph.png" # Output file for the dependency graph
-
-
-
-
-
-
-
