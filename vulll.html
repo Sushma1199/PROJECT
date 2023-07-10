@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guestbook</title>
+</head>
+<body>
+    <h1>Guestbook</h1>
+
+    <form method="POST" action="">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <h2>Recent Messages:</h2>
+
+    <?php
+    // Retrieve and display recent messages from the database
+    $messages = retrieveMessagesFromDatabase();
+    foreach ($messages as $message) {
+        $name = $message['name'];
+        $messageContent = $message['message'];
+
+        // Display each message
+        echo "<p><strong>Name:</strong> $name</p>";
+        echo "<p><strong>Message:</strong> $messageContent</p>";
+    }
+    ?>
+</body>
+</html>
