@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "npm" # Specify the package ecosystem (e.g., "npm", "maven")
+  - package-ecosystem: "rubygems" # Specify the package ecosystem (e.g., "npm", "maven")
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily" # Set the interval to "daily" or your preferred frequency
