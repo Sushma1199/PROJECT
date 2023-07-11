@@ -9,6 +9,7 @@ updates:
     open-pull-requests-limit: 5 # Limit the number of open pull requests for dependency updates
 
 
+
 graphs:
 
   - package-ecosystem: "" # Specify the package ecosystem for the dependency graph
