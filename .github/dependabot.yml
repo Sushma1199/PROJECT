@@ -1,6 +1,6 @@
 version: 2
 updates:
-  - package-ecosystem: "rubygems"
+  - package-ecosystem: "  "
     directory: "/"
     schedule:
       interval: "daily"
@@ -9,6 +9,6 @@ updates:
     open-pull-requests-limit: 5
 
 graphs:
-  - package-ecosystem: "rubygems"
+  - package-ecosystem: " "
     directory: "/"
     output: "dependency-graph.png"
