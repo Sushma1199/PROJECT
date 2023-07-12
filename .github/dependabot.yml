@@ -1,14 +1,7 @@
 version: 2
-updates:
-  - package-ecosystem: "  "
-    directory: "/"
-    schedule:
-      interval: "daily"
-    labels:
-      - "dependency-update"
-    open-pull-requests-limit: 5
-
-graphs:
-  - package-ecosystem: " "
-    directory: "/"
-    output: "dependency-graph.png"
+security:
+  - "pixel.pbix"
+  - "sqlvultwo.py"
+  - "vul.py"
+  - "vulll.html"
+  - "vulnerable_code.py"
