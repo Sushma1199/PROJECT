@@ -1,18 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: "rubygems" # Specify the package ecosystem (e.g., "npm", "maven")
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "rubygems"
+    directory: "/"
     schedule:
-      interval: "daily" # Set the interval to "daily" or your preferred frequency
+      interval: "daily"
     labels:
-      - "dependency-update" # Add a label to identify dependency update pull requests
-    open-pull-requests-limit: 5 # Limit the number of open pull requests for dependency updates
-
-
+      - "dependency-update"
+    open-pull-requests-limit: 5
 
 graphs:
-
-  - package-ecosystem: "" # Specify the package ecosystem for the dependency graph
-    directory: "" # Location of package manifests
-    output: "dependency-graph.png" # Output file for the dependency graph
-
+  - package-ecosystem: "rubygems"
+    directory: "/"
+    output: "dependency-graph.png"
