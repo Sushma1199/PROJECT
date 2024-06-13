@@ -1,19 +1,17 @@
-# Dockerfile
+FROM node:alpine
+RUN apk add --no-cache make gcc g++ python
+RUN mkdir -p /usr/src/pixi/api
+WORKDIR /usr/src/pixi/api
+COPY package.json /usr/src/pixi/api
 
-# Base image
-FROM python:3.9
 
-# Set the working directory in the container
-WORKDIR /app
+RUN npm install --save
 
-# Copy the requirements file to the container
-COPY requirements.txt .
+COPY . /usr/src/pixi/api
 
-# Install the dependencies
-RUN pip install -r requirements.txt
+RUN npm install -g nodemon
 
-# Copy the application code to the container
-COPY . .
+EXPOSE 8080
 
-# Set the command to run your application
-CMD ["python", "app.py"]
+
+CMD ["nodemon", "/usr/src/pixi/api/api.js"]
